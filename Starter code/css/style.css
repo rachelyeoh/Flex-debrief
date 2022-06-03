@@ -11,4 +11,55 @@ body {
     width: 25%;
 }
 
-.row {}
+.row {
+    display: flex;
+    padding: 0 4px;
+    align-items: center;
+}
+
+.row img{
+    flex-basis: 25% 25%;
+    max-width: 100%;
+    padding: 0 4px;
+    margin-top: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+    /* .heading {
+        position: relative;
+        right: 35%;
+    } */
+    
+    .row {
+       flex-wrap: wrap;
+    }
+
+    .row img {
+        width: 500px;
+        height: 500px;
+    }
+
+    .row > div {
+        flex: 50%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+        /*demo*/
+        margin-bottom: 10px;
+    }
+
+    /* .row img{
+        max-width: 50%;
+        box-sizing: border-box;
+    } */
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+       align-items: center;
+       flex-direction: column;
+    }
+
+    /* .row img{
+        max-width: 100%;
+        box-sizing: border-box;
+    } */
+}
+
